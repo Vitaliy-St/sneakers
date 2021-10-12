@@ -1,8 +1,16 @@
-// базовые подключения
+// basic
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// mega
 @import "./components/header";
+@import "./components/hero";
+@import "./components/catalog";
+
+// mini
+@import "./components/nav";
+@import "./components/cart";
+@import "./components/logo";
+@import "./components/product";

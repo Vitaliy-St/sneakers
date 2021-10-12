@@ -1,9 +1,11 @@
 <header class="header">
-  <div class="container grid">
-    <a class="logo header__logo">Sneakers</a>
+  <div class="container grid header__container">
+    <div class="header__left">
+      <a class="logo header__logo">SneakerS</a>
+    </div>
     <div class="header__right">
       <nav class="nav header__nav">
-        <ul class="nav__list">
+        <ul class="nav__list list-reset">
           <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
           <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
           <li class="nav__item">
@@ -18,7 +20,14 @@
           <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
         </ul>
       </nav>
-      <button class="cart header__cart btn-reset"></button>
+      <div class="cart header__cart">
+        <button class="btn-reset cart__btn">
+          <svg>
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
+          <div class="cart__count">1</div>
+        </button>
+      </div>
     </div>
   </div>
 </header>
