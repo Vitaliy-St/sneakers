@@ -17,12 +17,11 @@
   }
 
   &__btns {
+    @include flex-all-center;
+
     position: absolute;
     left: 0;
     top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.6);
@@ -44,9 +43,8 @@
   }
 
   &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-all-center;
+
     border-radius: 100%;
     width: 80px;
     height: 80px;

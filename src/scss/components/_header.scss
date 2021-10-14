@@ -4,12 +4,12 @@
   top: 0;
   z-index: 10;
   width: 100%;
+  background-color: rgba(72, 66, 131, 0.9);
 
   &__container {
     position: relative;
     align-items: center;
     padding: var(--second-offset) var(--paddings-border);
-    background-color: #484283ed;
 
     &::before {
       content: "";
@@ -28,7 +28,8 @@
   }
 
   &__right {
-    display: flex;
+    @include flex;
+
     justify-content: flex-end;
     grid-column: 10 span;
   }

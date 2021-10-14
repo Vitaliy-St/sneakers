@@ -3,12 +3,12 @@
 
   &__left {
     grid-column: 3 span;
-    border-radius: 4px;
-    padding: var(--second-offset);
-    background-color: var(--color-bg);
   }
 
   &__grid {
+    @include flex-v-center;
+
+    flex-direction: column;
     grid-column: 9 span;
   }
 
@@ -16,6 +16,7 @@
     margin: 0;
     margin-bottom: var(--second-offset);
     font: var(--prehigh-book);
+    color: var(--color-main);
   }
 
   &__caption {
@@ -30,8 +31,18 @@
   }
 
   &__prop-checkboxes {
-    display: flex;
+    @include flex;
+
     justify-content: space-between;
+  }
+
+  &__apply {
+    margin-bottom: var(--second-offset);
+    width: 100%;
+  }
+
+  &__more {
+    margin-top: var(--main-offset);
   }
 }
 
@@ -40,5 +51,96 @@
 
   &__item {
     grid-column: 3 span;
+  }
+}
+
+.catalog-filters {
+  border-radius: 4px;
+  padding: var(--second-offset);
+  background-color: var(--color-bg);
+
+  &__btns {
+    @include flex-v-center;
+
+    flex-direction: column;
+  }
+}
+
+.catalog-price {
+  &__wrapper {
+    @include flex;
+
+    position: relative;
+    flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      height: 34px;
+      background-color: var(--color-gray);
+      transform: translateX(-50%);
+    }
+  }
+
+  &__input {
+    border: 1px solid var(--color-gray);
+    width: 50%;
+    height: 50px;
+    font: var(--middle-book-title);
+    text-align: center;
+    color: var(--color-main);
+    background-color: transparent;
+
+    &:first-child {
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  .noUi-horizontal {
+    height: 2px;
+  }
+
+  .noUi-target {
+    border: none;
+    box-shadow: none;
+    background-color: var(--color-main);
+  }
+
+  .noUi-connect {
+    background: var(--color-main);
+  }
+
+  .noUi-horizontal .noUi-handle {
+    top: -8px;
+    width: 3px;
+    height: 18px;
+  }
+
+  .noUi-handle {
+    right: 0;
+    border: none;
+    border-radius: 100px;
+    box-shadow: none;
+    background: var(--color-main);
+    cursor: pointer;
+  }
+
+  .noUi-handle::after,
+  .noUi-handle::before {
+    display: none;
+  }
+
+  .noUi-handle-lower {
+    right: -3px;
   }
 }
