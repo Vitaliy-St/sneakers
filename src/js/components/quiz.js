@@ -120,7 +120,7 @@ const quizTemplate = (data = [], dataLength = 0, options) => {
 				</ul>
         <div class="quiz-bottom">
           <div class="quiz-question__count">${number} из ${dataLength}</div>
-          <button type="button" class="btn btn-reset btn--thirdly quiz-question__btn" data-next-btn>${nextBtnText}</button>
+          <button class="btn btn-reset btn--thirdly quiz-question__btn" type="button" data-next-btn>${nextBtnText}</button>
         </div>
 			</div>
 	`;

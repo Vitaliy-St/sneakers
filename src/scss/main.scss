@@ -1,19 +1,28 @@
 // basic
+
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
 
 // mega
+
 @import "./components/header";
 @import "./components/hero";
 @import "./components/catalog";
 @import "./components/about";
 @import "./components/quiz";
+@import "./components/team";
+@import "./components/faq";
+@import "./components/contacts";
+@import "./components/instagram";
+@import "./components/footer";
 
-// mini
+// minimum
+
 @import "./components/nav";
 @import "./components/cart";
 @import "./components/logo";
 @import "./components/product";
 @import "./components/sizes";
+@import "./components/social";
