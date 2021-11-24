@@ -47,7 +47,7 @@
     @include flex-v-center;
 
     justify-content: flex-end;
-    font: 700 20px / 20px var(--font-family);
+    font: var(--middle-bold);
 
     &::before {
       content: "";

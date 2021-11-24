@@ -140,7 +140,7 @@ class Quiz {
   }
 
   init() {
-    console.log("init!");
+    // console.log("init!");
     this.$el.innerHTML = quizTemplate(
       this.data[this.counter],
       this.dataLength,
@@ -218,7 +218,7 @@ class Quiz {
   }
 
   events() {
-    console.log("events!");
+    // console.log("events!");
     this.$el.addEventListener("click", (e) => {
       if (e.target == document.querySelector("[data-next-btn]")) {
         this.addToSend();

@@ -23,10 +23,12 @@
 
   // fonts
   --font-family: "Intro", sans-serif;
+  --font-family-bold: "IntroBold", sans-serif;
   --font-family-book: "IntroBook", sans-serif;
-  --middle-high-bold: 700 30px / 140% var(--font-family);
+  --middle-high-bold: 700 30px / 140% var(--font-family-bold);
+  --middle-bold: 700 20px / 20px var(--font-family-bold);
   --middle-high-regular: 400 30px / 140% var(--font-family);
-  --prehigh-bold: 700 24px / 24px var(--font-family);
+  --prehigh-bold: 700 24px / 24px var(--font-family-bold);
   --prehigh-regular: 400 20px / 20px var(--font-family);
   --prehigh-book: 400 24px / 24px var(--font-family-book);
   --middle-regular-btn: 400 16px / 16px var(--font-family);
