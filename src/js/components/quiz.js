@@ -72,8 +72,24 @@ const quizData = [
 const quizTemplate = (data = [], dataLength = 0, options) => {
   const { number, title } = data;
   const { nextBtnText } = options;
+
   const answers = data.answers.map((item) => {
-    if (item.type === "checkbox") {
+    if (data.number === 2) {
+      return `
+      <li class="quiz-question__item">
+        <label class="custom-checkbox quiz-question__label">
+	        <input class="custom-checkbox__field quiz-question__answer"
+            type="${item.type}"
+            data-valid="false"
+            name="${data.answer_alias}"
+            ${item.type == "text" ? 'placeholder="Введите ваш вариант"' : ""}
+            value="${item.type !== "text" ? item.answer_title : ""}"
+          >
+	        <span class="custom-checkbox__content">${item.answer_title}</span>
+      	</label>
+      </li>
+		`;
+    } else if (item.type === "checkbox") {
       return `
       <li class="quiz-question__item">
         <img src="img/sneaker.jpg" alt="Тип кроссовок">

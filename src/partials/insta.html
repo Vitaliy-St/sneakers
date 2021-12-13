@@ -7,16 +7,24 @@
         <p class="instagram__descr">
           Заполните форму и&nbsp;наш менеджер свяжется с&nbsp;вами
         </p>
-        <input
-          class="input instagram__input"
-          type="text"
-          placeholder="Ваше имя"
-        />
-        <input
-          class="input instagram__input"
-          type="tel"
-          placeholder="Номер телефона"
-        />
+        <label class="form-label">
+          <input
+            class="input instagram__input"
+            type="text"
+            placeholder="Ваше имя"
+            name="name"
+            data-validate-field="name"
+          />
+        </label>
+        <label class="form-label">
+          <input
+            class="input instagram__input"
+            type="tel"
+            placeholder="Номер телефона"
+            name="phone"
+            data-validate-field="phone"
+          />
+        </label>
         <button class="btn btn-reset btn--primary instagram__btn">
           Отправить
         </button>

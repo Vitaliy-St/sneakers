@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .instagram {
   padding: var(--big-offset) 0;
 
@@ -6,6 +8,10 @@
 
     align-items: flex-end;
     justify-content: space-between;
+
+    @include small-tablet {
+      justify-content: center;
+    }
   }
 
   &__left {
@@ -14,6 +20,11 @@
     border-radius: 4px;
     width: 380px;
     background-color: var(--color-eastbay);
+
+    @include mobile {
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
   &__right {
@@ -21,6 +32,10 @@
 
     flex-direction: column;
     width: calc(100% - (380px + var(--small-offset)));
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__title {

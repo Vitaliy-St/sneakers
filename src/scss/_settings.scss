@@ -30,9 +30,10 @@ a {
 }
 
 .btn-reset {
+  outline: none;
   border: none;
   padding: 0;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -67,6 +68,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .btn {
@@ -79,8 +84,14 @@ a {
     color: var(--color-white);
     background-color: var(--color-accent);
 
-    &:hover {
-      background-color: var(--color-accent-hover);
+    &:active {
+      background-color: #8c2828;
+    }
+
+    @include desktop {
+      &:hover {
+        background-color: var(--color-accent-hover);
+      }
     }
   }
 
@@ -88,8 +99,10 @@ a {
     color: var(--color-white);
     background-color: var(--color-main);
 
-    &:hover {
-      background-color: var(--color-main-hover);
+    @include desktop {
+      &:hover {
+        background-color: var(--color-main-hover);
+      }
     }
   }
 
@@ -99,11 +112,26 @@ a {
     color: var(--color-main);
     background-color: transparent;
 
-    &:hover {
-      color: var(--color-white);
-      background-color: var(--color-main);
+    @include desktop {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-main);
+      }
     }
   }
+}
+
+.btn--primary.focus-visible {
+  background-color: var(--color-accent-hover);
+}
+
+.btn--secondary.focus-visible {
+  background-color: var(--color-main-hover);
+}
+
+.btn--thirdly.focus-visible {
+  color: var(--color-white);
+  background-color: var(--color-main);
 }
 
 .title {
@@ -136,6 +164,10 @@ a {
       background-image: url("../img/check.svg");
       background-size: auto; // 15px 12px
     }
+  }
+
+  &__field:focus + .custom-checkbox__content::before {
+    outline: 2px solid var(--color-accent);
   }
 }
 
@@ -203,4 +235,15 @@ a {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.form-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.js-validate-error-label {
+  order: -1;
 }

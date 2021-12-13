@@ -1,3 +1,5 @@
+@import "./mixins";
+
 :root {
   // colors
   --color-black: #000;
@@ -25,6 +27,7 @@
   --font-family: "Intro", sans-serif;
   --font-family-bold: "IntroBold", sans-serif;
   --font-family-book: "IntroBook", sans-serif;
+  --big-high-bold: 700 36px / 140% var(--font-family-bold);
   --middle-high-bold: 700 30px / 140% var(--font-family-bold);
   --middle-bold: 700 20px / 20px var(--font-family-bold);
   --middle-high-regular: 400 30px / 140% var(--font-family);
@@ -36,4 +39,14 @@
   --middle-book: 400 16px / 140% var(--font-family-book);
   --middle-book-title: 400 16px / 16px var(--font-family-book);
   --small-book: 400 14px / 140% var(--font-family-book);
+}
+
+@include mobile {
+  :root {
+    --grid-gap: 10px;
+    --main-offset: 20px;
+    --second-offset: 14px;
+    --small-offset: 8px;
+    --big-offset: 30px;
+  }
 }

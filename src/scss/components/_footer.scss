@@ -4,5 +4,33 @@
 
   &__container {
     @include flex-all-sb;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    .nav {
+      &__list {
+        @include small-tablet {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      &__item {
+        @include small-tablet {
+          margin-bottom: var(--small-offset);
+        }
+      }
+    }
+  }
+
+  &__left {
+    @include tablet {
+      margin-bottom: var(--second-offset);
+    }
   }
 }

@@ -20,6 +20,11 @@
     z-index: 2;
     width: 37%;
     transform: translateY(50px);
+
+    @include small-tablet {
+      width: 100%;
+      transform: none;
+    }
   }
 
   &__title {
@@ -39,7 +44,11 @@
 
     &::before,
     &::after {
-      content: none;
+      display: none;
+    }
+
+    @include mobile {
+      width: auto;
     }
   }
 
@@ -57,11 +66,15 @@
       height: 3px;
       background-color: var(--color-white);
     }
+
+    @include small-tablet {
+      transform: none;
+    }
   }
 
   &__image {
     position: absolute;
-    right: 350px;
+    right: 100px;
     top: 0;
     z-index: 1;
     overflow: hidden;
@@ -97,5 +110,22 @@
       object-fit: cover;
       transform: translateX(-5px);
     }
+
+    @include small-desktop {
+      right: 0;
+    }
+
+    @include tablet {
+      right: -100px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    padding: 50px 0;
+    height: auto;
   }
 }
